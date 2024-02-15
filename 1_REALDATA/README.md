@@ -1,6 +1,7 @@
 # Analyses from real data
 Here we provide the main code for the paper Palmer _et al._ 2024. By running [Analysis.R](./REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data in [_input.Rdata_](./REALDATA/input.Rdata) and obtain the output (which is also provided in the file called _out.RDS_) from which all the main content of the paper and figures have been obtained by running [_ExploringResult.R_](./REALDATA/ExploringResult.R). 
-Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps. 
+Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps.
+
 In this section you find the following files: 
 
 ## Core script: 
