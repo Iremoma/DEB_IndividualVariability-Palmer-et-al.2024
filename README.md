@@ -14,11 +14,10 @@ Recommended properties of the computer, and those that characterized the compute
 - Intel(R) Xeon(R)  CPU E5-2620 v4 @ 2.10GHz (40 cores and 64 GB RAM)
 
 # Contents and working flow
-We provide the STAN routine that we have developed for estimating four DEB parameters at the individual level for 69 cultured Gilt-head breams (_Sparus aurata_) for which up to 11 measures of length and wet weight were available. In addition, we provide all the R scripts necessary to reproduce the data exploration and analysis, simulations, and results presented on the paper Palmer _et al._, 2024.  
-All the code is organized in the following folders: 
+We provide all the R scripts necessary to reproduce the data exploration and analysis, simulations, and results presented on the paper Palmer _et al._, 2024. **Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps.** All the code is organized in the following folders: 
 
 ## 1. [Analyses from real data](./1_REALDATA)
-Here we provide the main code for the paper Palmer _et al._ 2024. By running [Analysis.R](./REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data in [_input.Rdata_](./REALDATA/input.Rdata) and obtain the output (which is also provided in the file called _out.RDS_) from which all the main content of the paper and figures have been obtained [_ExploringResult.R_](./REALDATA/ExploringResult.R). Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps. 
+In this section you will find the STAN routine developed for estimating four DEB parameters at the individual level for 69 cultured Gilt-head breams (_Sparus aurata_) for which up to 11 measures of length and wet weight were available. We provide R code for exploring the empirical data, implementeing the STAN model, and exploring the results of the model. 
 
 ## 2. [Simulations](./2_SIMULATIONS)
 
@@ -29,4 +28,4 @@ If you use this code, please consider citing our work:
 Palmer, M., Moro-Martínez, I., Tomás-Ferrer, J., Orestis, Marilo, Marine, Amalia, Lika, Campos-Candela, A. (2024) Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications.
 
 
-Any questions: .....@......
+Any questions: palmer@imedea.uib-csic.es
