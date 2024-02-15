@@ -13,7 +13,7 @@ We provide the STAN routine that we have developed for estimating four DEB param
 For this, all the code is organized in the following folders: 
 1. [Analyses from real data](./1_REALDATA)
 2. [Simulations](./2_SIMULATIONS)
-3. [Supplementary materials](./3_SUPPLEMENTARY MATERIALS)
+3. [Supplementary materials](./3_SUPPLEMENTARY_MATERIALS)
  
 # Requirements
 Install: 
@@ -31,9 +31,9 @@ Here you find the following files:
 ### Input data: 
 - [_input.Rdata_](./REALDATA/input.Rdata) This file contains the experimental data used for estimating the parameters of the DEB model for our case study (more datils in Palmer _et al._ 2024). This is the input data for _1_Analysis.R_.
 ### Core script: 
-1. [Analysis.R](./REALDATA/Analysis.R) This is the main script, containing the code for estimating four DEB parameters from the observed data contained in input.RData. This script has served as the skeleton of the project in Palmer _et al._ 2024. It can be run in multicore or local version. As the script is presented here, it is prepared for be run in a multicore version (the  local version is on the script but currently locked). Note however that if you do not have multicore, running this script may take a considerable amount of time (in the order of several days). For this reason, we provide the output of the model as well.
+1. [Analysis.R](./REALDATA/Analysis.R) This script containing the code for estimating four DEB parameters from the observed data contained in [_input.Rdata_](./REALDATA/input.Rdata). This script has served as the skeleton of the project in Palmer _et al._ 2024. It can be run in multicore or local version. As the script is presented here, it is prepared for be run in a multicore version (the  local version is on the script but currently locked). Note however that if you do not have multicore, running this script may take a considerable amount of time (in the order of several days). For this reason, we provide the output of the model as well.
 ### Output(s): 
-- _out.RDS_ This is the expected output from running _1_Analysis.R_ and using the input data provided. Reading this file requires to have installed CmdStanR (see requirements above).
+- _out.RDS_ This is the expected output from running _[Analysis.R](./REALDATA/Analysis.R)_ and using the input data provided. Reading this file requires to have installed CmdStanR (see requirements [above](Requirements)).
 - _out_dignosi.txt_ When running _1_Analysis.R_, you will obtain a .txt file that will contain several quality control descriptors for the model. 
 - _out_model.R_ When running _1_Analysis.R_, you will obtain a .R file with all the implemented DEB model for this analysis.
 ### Out Exploration: 
