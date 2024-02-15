@@ -26,7 +26,7 @@ Recommended properties of the computer, and those that characterized the compute
 # Working flow
 
 ## Analyses from real data
-Here we provide the main code for the paper Palmer _et al._ 2024. By running [Analysis.R_](./REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data (_input.Rdata_) and obtain the output (which is also provided in _out.RDS_) from which all the main content of the paper and figures have been obtained (_2_ExploringResult.R_). Note that the script is self-explanatory and has a lot of notations to guide the user on the different steps. Here you find the following files: 
+Here we provide the main code for the paper Palmer _et al._ 2024. By running [Analysis.R](REALDATA/Analysis), you will estimate four DEB parameters from the provided observed data (_input.Rdata_) and obtain the output (which is also provided in _out.RDS_) from which all the main content of the paper and figures have been obtained (_2_ExploringResult.R_). Note that the script is self-explanatory and has a lot of notations to guide the user on the different steps. Here you find the following files: 
 ### Input data: 
 _input.Rdata_ This file contains the experimental data used for estimating the parameters of the DEB model for our case study (more datils in Palmer _et al._ 2024). This is the input data for _1_Analysis.R_.
 ### Core script: 
