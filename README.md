@@ -11,7 +11,7 @@ In this repository we provide all the scripts necessary to reproduce the data ex
 We provide the STAN routine that we have developed for estimating four DEB parameters at the individual level for 69 cultured Gilt-head breams (_Sparus aurata_) for which up to 11 measures of length and wet weight were available. 
 
 For this, all the code is organized in the following folders: 
-1. [Analyses] (REALDATA)
+1. [Analyses from real data] (REALDATA)
 2. Simulation
 3. Supplementary materials
  
@@ -25,8 +25,8 @@ Recommended properties of the computer, and those that characterized the compute
 
 # Working flow
 
-## Analyses
-Here we provide the main script of the paper Palmer _et al._ 2024. By running it (_1_Analysis.R_), you will estimate four DEB parameters from the provided observed data (_input.Rdata_) and obtain the output (which is also provided in _out.RDS_) from which all the main content of the paper and figures have been obtained (_2_ExploringResult.R_). Note that the script is self-explanatory and has a lot of notations to guide the user on the different steps. Here you find the following files: 
+## Analyses from real data
+Here we provide the main code for the paper Palmer _et al._ 2024. By running [Analysis.R_](./REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data (_input.Rdata_) and obtain the output (which is also provided in _out.RDS_) from which all the main content of the paper and figures have been obtained (_2_ExploringResult.R_). Note that the script is self-explanatory and has a lot of notations to guide the user on the different steps. Here you find the following files: 
 ### Input data: 
 _input.Rdata_ This file contains the experimental data used for estimating the parameters of the DEB model for our case study (more datils in Palmer _et al._ 2024). This is the input data for _1_Analysis.R_.
 ### Core script: 
