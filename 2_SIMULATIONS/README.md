@@ -5,7 +5,7 @@ In this section you find the following files:
 
 ## Working flow
 
-1. [Simulations.R](../2_SIMULATIONS/Simulations.R)
+1. [**Simulations.R**](../2_SIMULATIONS/Simulations.R)
   - *Inputs*:
       - [_input.Rdata_](../2_SIMULATIONS/input.RData)
       - _out.RDS_
@@ -14,7 +14,7 @@ In this section you find the following files:
       -  [out_sim.RDS](../2_SIMULATIONS/out_sim.RDS)
       -  [input_sim.RData](../2_SIMULATIONS/input_sim.RData)
 
-2. [Exploration of results](../2_SIMULATIONS/Fig5.R)
+2. [**Exploration of results**](../2_SIMULATIONS/Fig5.R)
    - *Inputs*:
       -  [out_sim.RDS](../2_SIMULATIONS/out_sim.RDS)
       -  [input_sim.RData](../2_SIMULATIONS/input_sim.RData)
