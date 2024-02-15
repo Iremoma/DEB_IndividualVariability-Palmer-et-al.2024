@@ -8,16 +8,16 @@ In this section you find the following files:
 1. [**Simulations.R**](../2_SIMULATIONS/Simulation.R)
   - *Inputs*:
       - [_input.Rdata_](../2_SIMULATIONS/input.RData)
-      - _out.RDS_
+      - _out.RDS_ Note: the size of this file exceeds the limits for github. We are exploring a way to make it available.
       - [_DEB.R_](../2_SIMULATIONS/DEB.R)
   - *Outputs*:
-      -  [out_sim.RDS](../2_SIMULATIONS/out_sim.RDS)
-      -  [input_sim.RData](../2_SIMULATIONS/input_sim.RData)
+      -  _out_sim.RDS_ Note: the size of this file exceeds the limits for github. We are exploring a way to make it available.
+      -  [_input_sim.RData_](../2_SIMULATIONS/input_sim.RData)
 
 2. [**Exploration of results**](../2_SIMULATIONS/Fig5.R)
    - *Inputs*:
-      -  [out_sim.RDS](../2_SIMULATIONS/out_sim.RDS)
-      -  [input_sim.RData](../2_SIMULATIONS/input_sim.RData)
+      -  _out_sim.RDS_ Note: the size of this file exceeds the limits for github. We are exploring a way to make it available.
+      -  [_input_sim.RData_](../2_SIMULATIONS/input_sim.RData)
     - *Outputs*:
       - Fig 5 in main test in Palmer _et al._ 2024
 
