@@ -10,7 +10,7 @@ In this section you find the following files:
  ### Input: 
  - [_input.Rdata_](./REALDATA/input.Rdata) This file contains the experimental data used for estimating the parameters of the DEB model for our case study (more datils in Palmer _et al._ 2024). 
  ### Output(s): 
-- _out.RDS_ This is the expected output from running _Analysis.R_ and using the input data provided. Reading this file requires to have installed CmdStanR (see section [Requirements](#Requirements)).
+- _out.RDS_ This is the expected output from running _Analysis.R_ and using the input data provided. Reading this file requires to have installed CmdStanR (see section [Requirements](#./Requirements)).
 - _out_dignosi.txt_ When running _1._ _Analysis.R_, you will obtain a .txt file that will contain several quality control descriptors for the model. 
 - _out_model.R_ When running _1._ _Analysis.R_, you will obtain a .R file with all the implemented DEB model for this analysis.
   
