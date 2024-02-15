@@ -9,14 +9,14 @@ In this section you find the following files:
    - *Input*:
       - [_input.Rdata_](../1_REALDATA/input.Rdata) This file contains the experimental data used for estimating the parameters of the DEB model for our case study (more datils in Palmer _et al._ 2024). 
    - *Outputs*:
-      - _out.RDS_ This is the expected output from running _Analysis.R_ and using the input data provided. Reading this file requires to have installed CmdStanR (see section Requirements.
+      - _out.RDS_ This is the expected output from running _Analysis.R_ and using the input data provided. Reading this file requires to have installed CmdStanR (see section Requirements). Note: the size of this file exceeds the limits for github. We are exploring a way to make it available.
       - _out_dignosi.txt_ When running _Analysis.R_, you will obtain a .txt file that will contain several quality control descriptors for the model.
       - _out_model.R_ When running _Analysis.R_, you will obtain a .R file with all the implemented DEB model in **STAN code** for this analysis.
    
 2. [_ExploringResult.R_](../1_REALDATA/ExploringResult.R) This is a simplified script to show graphically the exploration for the output of the model. This script will help you to navigate and interpret the _out.RDS_ file. 
    - *Inputs*:
      - _input.RData_
-     - _out.RDS_
+     - _out.RDS_ Note: the size of this file exceeds the limits for github. We are exploring a way to make it available.
    - *Outputs*:
         - Table 3 in main test
         - Figures 1, 2, 3 and 4 in main test
