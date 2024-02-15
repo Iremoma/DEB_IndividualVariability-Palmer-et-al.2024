@@ -7,7 +7,7 @@ This repository is licensed under a xxxxx.
 
 # Requirements
 Install: 
-- R (4.1.3)
+- [R](https://www.r-project.org/about.html) (4.1.3 or higher)
 - CmdStanR (Command Stan R) in R: CmdStanR is a lightweight interface to Stan for R users. If you are using Stan in R for the first time, or you have no experience with this package, we encourage you to visit [Getting started with CmdStanR]( https://mc-stan.org/cmdstanr/articles/cmdstanr.html)  and follow the recommended steps to install the package.
 
 Recommended properties of the computer, and those that characterized the computer used for running these models, are: 
