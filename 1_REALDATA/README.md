@@ -16,7 +16,7 @@ In this section you find the following files:
 ## Exploration: 
 2. [_ExploringResult.R_](../1_REALDATA/ExploringResult.R) This is a simplified script to show graphically the exploration for the output of the model. This script will help you to navigate and interpret the _out.RDS_ file. 
    - *Inputs*:
-     - [_input.RData_](#input.RData)
+     - _input.RData_
      - _out.RDS_
    - *Outputs*:
         - Table 3 in main test
