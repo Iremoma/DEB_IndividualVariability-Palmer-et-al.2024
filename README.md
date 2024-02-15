@@ -15,7 +15,7 @@ For this, all the code is organized in the following folders:
 2. [Simulations](./2_SIMULATIONS)
 3. [Supplementary materials](./3_SUPPLEMENTARY_MATERIALS)
  
-# Requirements
+# [Requirements](#Requirements)
 Install: 
 - R (4.1.3)
 - CmdStanR (Command Stan R) in R: CmdStanR is a lightweight interface to Stan for R users. If you are using Stan in R for the first time, or you have no experience with this package, we encourage you to visit [Getting started with CmdStanR]( https://mc-stan.org/cmdstanr/articles/cmdstanr.html)  and follow the recommended steps to install the package.
