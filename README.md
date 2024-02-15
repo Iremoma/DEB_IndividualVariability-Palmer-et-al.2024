@@ -1,7 +1,9 @@
 # DEB_IIV_STAN  Palmer-et-al.-2024
 
-This is the code related to the publication: **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**.
-Authors: Miquel Palmer ....
+This repository contains all the code related to the manuscript entitled **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**. 
+Authors: Miquel Palmer, Irene Moro-Martinez, Joaquim Tomas-Ferrer, Amalia Grau, Maria Dolores Lopez-Belluga, Marine Herlin, Orestis Stavrakidis-Zachoua and Andrea Campos-Candela.
+
+This repository is licensed under a xxxxx. 
 
 # Contents
 In this repository we provide all the scripts necessary to reproduce the data exploration and analysis, simulations, and results presented on the paper Palmer _et al._, 2024. **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**.
