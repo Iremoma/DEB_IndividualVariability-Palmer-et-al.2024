@@ -1,18 +1,19 @@
 # DEB_IIV_STAN  Palmer-et-al.-2024
 
-This is the code related to the publication: Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications.
+This is the code related to the publication: **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**.
 Authors: Miquel palmer ....
-Prior to use the code:
+Prior to use the code: see the **Requirements** section below. 
 
 # Contents
-In this repository we provide all the scripts necessary to reproduce the data exploration and analysis, simulations, and results presented on the paper Palmer et al., 2024. Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications.
+In this repository we provide all the scripts necessary to reproduce the data exploration and analysis, simulations, and results presented on the paper Palmer _et al._, 2024. **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**.
 
-We provide the STAN routine that we have developed for estimating four DEB parameters at the individual level for 69 cultured Gilt-head breams (Sparus aurata) for which up to 11 measures   of length and wet weight were available. 
+We provide the STAN routine that we have developed for estimating four DEB parameters at the individual level for 69 cultured Gilt-head breams (_Sparus aurata_) for which up to 11 measures of length and wet weight were available. 
+
 For this, all the code is organized in the following folders: 
-1. Analyses
+1. Analyses [Analyses](REALDATA)
 2. Simulation
-
-SEGUIR LLISTA 
+3. Supplementary materials
+ 
 # Requirements
 Install: 
 - R (4.1.3)
@@ -20,6 +21,7 @@ Install:
 
 Recommended properties of the computer, and those that characterized the computer used for running these models, are: 
 - Intel(R) Xeon(R)  CPU E5-2620 v4 @ 2.10GHz (40 cores and 64 GB RAM)
+
 # Working flow
 
 ## Analyses
