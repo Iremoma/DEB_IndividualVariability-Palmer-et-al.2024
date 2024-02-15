@@ -2,7 +2,8 @@
 
 This is the code related to the publication: **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**.
 Authors: Miquel palmer ....
-Prior to use the code: see the **Requirements** section below. 
+
+Prior to use the code: see the [**Requirements**](./Requirements) section below. 
 
 # Contents
 In this repository we provide all the scripts necessary to reproduce the data exploration and analysis, simulations, and results presented on the paper Palmer _et al._, 2024. **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**.
