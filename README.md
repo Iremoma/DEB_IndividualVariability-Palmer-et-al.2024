@@ -22,12 +22,12 @@ All the code is organized in the following folders:
  
 # Working flow
 
-## 1. [Analyses from real data](./1_REALDATA/README.md)
+## 1. [Analyses from real data](./1_REALDATA)
 Here we provide the main code for the paper Palmer _et al._ 2024. By running [Analysis.R](./REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data in [_input.Rdata_](./REALDATA/input.Rdata) and obtain the output (which is also provided in the file called _out.RDS_) from which all the main content of the paper and figures have been obtained [_ExploringResult.R_](./REALDATA/ExploringResult.R). Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps. 
 
-## 2. [Simulations](./2_SIMULATIONS/README.md)
+## 2. [Simulations](./2_SIMULATIONS)
 
-## 3. [Supplementary materials](./3_SUPPLEMENTARY_MATERIALS/README.md) 
+## 3. [Supplementary materials](./3_SUPPLEMENTARY_MATERIALS) 
 
 # Citation
 If you use this code, please consider citing our work:
