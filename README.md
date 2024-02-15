@@ -15,7 +15,7 @@ For this, all the code is organized in the following folders:
 2. [Simulations](./2_SIMULATIONS)
 3. [Supplementary materials](./3_SUPPLEMENTARY_MATERIALS)
  
-# [Requirements](#Requirements)
+# Requirements
 Install: 
 - R (4.1.3)
 - CmdStanR (Command Stan R) in R: CmdStanR is a lightweight interface to Stan for R users. If you are using Stan in R for the first time, or you have no experience with this package, we encourage you to visit [Getting started with CmdStanR]( https://mc-stan.org/cmdstanr/articles/cmdstanr.html)  and follow the recommended steps to install the package.
@@ -39,7 +39,7 @@ Here you find the following files:
 - [_input.Rdata_](./REALDATA/input.Rdata) This file contains the experimental data used for estimating the parameters of the DEB model for our case study (more datils in Palmer _et al._ 2024). This is the input data for
   
  #### Output(s): 
-- _out.RDS_ This is the expected output from running _[Analysis.R](./REALDATA/Analysis.R)_ and using the input data provided. Reading this file requires to have installed CmdStanR (see section Requirements).
+- _out.RDS_ This is the expected output from running _[Analysis.R](./REALDATA/Analysis.R)_ and using the input data provided. Reading this file requires to have installed CmdStanR (see section [Requirements](#Requirements)).
 - _out_dignosi.txt_ When running _1._ _Analysis.R_, you will obtain a .txt file that will contain several quality control descriptors for the model. 
 - _out_model.R_ When running _1._ _Analysis.R_, you will obtain a .R file with all the implemented DEB model for this analysis.
   
