@@ -1,0 +1,2 @@
+
+The codes of the supplementary materials of article Palmer _et al._ 2024 show a battery of analyzes and/or simulations carried out to explore complementary parts to the general analytical strategy presented in the sections [1. Analyses from real data](./1_REALDATA) and [2. Simulations](./2_SIMULATIONS). We advise users to browse these folders with the texts of the article's supplementary materials in order to have all the information and complete justification for each analysis.
