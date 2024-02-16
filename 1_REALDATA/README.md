@@ -1,6 +1,6 @@
 # Analyses from real data
 Here we provide the code for obtaining the main content in the paper Palmer _et al._ 2024. 
-By running [Analysis.R](../1_REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data in [_input.Rdata_](../1_REALDATA/input.Rdata) and obtain the output (which is also provided in the file called _out.RDS_). Afterwards, you will be able to explore the output of the model by running [_ExploringResult.R_](../1_REALDATA/ExploringResult.R). Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps.
+By running [Analysis.R](../1_REALDATA/Analysis.R), you will estimate four DEB parameters from the provided observed data in [_input.Rdata_](https://github.com/Iremoma/DEB_IndividualVariability-Palmer-et-al.2024/releases/download/v1.0/input.RData) and obtain the output (which is also provided in the file called _out.RDS_). Afterwards, you will be able to explore the output of the model by running [_ExploringResult.R_](../1_REALDATA/ExploringResult.R). Note that the scripts are self-explanatory and have a lot of notations to guide the user on the different steps.
 
 In this section you find the following files: 
 
