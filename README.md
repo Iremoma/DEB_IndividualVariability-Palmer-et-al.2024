@@ -4,7 +4,7 @@ This repository contains all the code related to the manuscript entitled **Asses
 
 The work presented here is a contribution towards gaining greater representation of the between-individual variability in Dynamic Energy Budget (**DEB**) models. [More about DEB theory [here](https://debportal.debtheory.org/docs/)]. We present our analytical strategy based on Bayesian inference and hierarchical models for inferring variability in DEB parameters from data across individuals (also known as between-individual variability). The analytical strategy is developed in **STAN**, which is establishing itself as a general-purpose statistical software suitable for the process of fitting complex mechanistic and dynamic models. [More about STAN [here](https://mc-stan.org/)].
 
-This repository is licensed under a [MIT License Copyright (c) 2024 Miquel Palmer (et.al. 2024)](../LICENSE). 
+This repository is licensed under a [MIT License Copyright (c) 2024 Miquel Palmer (et.al. 2024)](./LICENSE). 
 
 # Requirements
 Install: 
