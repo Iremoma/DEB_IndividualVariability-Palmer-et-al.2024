@@ -16,7 +16,7 @@ In this section you find the following files:
 2. [_ExploringResult.R_](../1_REALDATA/ExploringResult.R) This is a simplified script to show graphically the exploration for the output of the model. This script will help you to navigate and interpret the _out.RDS_ file. 
    - *Inputs*:
      - _input.RData_
-     - _out.RDS_ Note: the size of this file exceeds the limits for github. Note: the size of this file exceeds the limits for github repositoru, you can downlaod from releases [here](https://github.com/Iremoma/DEB_IndividualVariability-Palmer-et-al.2024/releases/download/v1.1/out.RDS).
+     - _out.RDS_ Note: the size of this file exceeds the limits for github repository, you can download it directly from releases [clicking here](https://github.com/Iremoma/DEB_IndividualVariability-Palmer-et-al.2024/releases/download/v1.1/out.RDS).
    - *Outputs*:
         - Table 3 in main test
         - Figures 1, 2, 3 and 4 in main test
