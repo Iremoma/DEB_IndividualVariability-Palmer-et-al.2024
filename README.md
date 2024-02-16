@@ -2,7 +2,7 @@
 
 This repository contains all the code related to the manuscript entitled **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**, by Miquel Palmer, Irene Moro-Martinez, Joaquim Tomas-Ferrer, Amalia Grau, Maria Dolores Lopez-Belluga, Marine Herlin, Orestis Stavrakidis-Zachoua and Andrea Campos-Candela.
 
-The work presented here may be a first step towards gaining greater representation of the between-individual variability in Dynamic Energy Budget (**DEB**) models. [More about DEB theory [here](https://debportal.debtheory.org/docs/)]. We present our analytical strategy based on Bayesian inference and hierarchical models for inferring variability in DEB parameters from data across individuals (also known as between-individual or inter-individual variabilit; **IIV**). The analytical strategy is developed in **STAN**, which is establishing itself as a general-purpose statistical software suitable for the process of fitting complex mechanistic and dynamic models. [More about STAN [here](https://mc-stan.org/)].
+The work presented here is a contribution towards gaining greater representation of the between-individual variability in Dynamic Energy Budget (**DEB**) models. [More about DEB theory [here](https://debportal.debtheory.org/docs/)]. We present our analytical strategy based on Bayesian inference and hierarchical models for inferring variability in DEB parameters from data across individuals (also known as between-individual or inter-individual variabilit; **IIV**). The analytical strategy is developed in **STAN**, which is establishing itself as a general-purpose statistical software suitable for the process of fitting complex mechanistic and dynamic models. [More about STAN [here](https://mc-stan.org/)].
 
 This repository is licensed under a xxxxx. 
 
@@ -26,6 +26,7 @@ In this section you will find the STAN routine developed for estimating four DEB
 Data-simulation experiments were completed for demonstrating opportunities and limitations of our analytical strategy followed in the section above for estimating DEB parameters at the individual level. 
 
 ## 3. [Supplementary materials](./3_SUPPLEMENTARY_MATERIALS) 
+The codes of the supplementary materials of article Palmer _et al._ 2024 show a battery of analyzes and/or simulations carried out to explore complementary parts to the general analytical strategy presented in the sections [1. Analyses from real data](./1_REALDATA) and [2. Simulations](./2_SIMULATIONS). We advise users to browse these folders with the texts of the article's supplementary materials in order to have all the information and complete justification for each analysis.
 
 # Citation
 If you use this code, please consider citing our work:
