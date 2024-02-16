@@ -5,7 +5,7 @@ The codes of the supplementary materials of the article Palmer _et al._ 2024 sho
 The codes included in this part of the repository refer to each of the sections of Supplementary Materials in Palmer _etal._ 2024 that had some analysis or modeling. Because **scripts are self-explanatory and have a lot of notations to guide the user on the different steps** here we just describe the main content of each of the folders to facilitate navigation. In addition, we advise users to browse these folders with the texts of the article's supplementary materials in order to have all the information and complete justification for each analysis.
 
 ## Contents
-### [S1](./3_SUPPLEMENTARY_MATERIALS/S1) Fitting observed temperature to a sinusoidal function of time
+### [S1](../3_SUPPLEMENTARY_MATERIALS/S1) Fitting observed temperature to a sinusoidal function of time
 ### [S2](3_SUPPLEMENTARY_MATERIALS/S2) Comparing DEB model predictions when using observed daily data vs sinusoidal function
 ### [S3](3_SUPPLEMENTARY_MATERIALS/S3) Fitting observed biomass to a polynomial function of time
 ### [S4](3_SUPPLEMENTARY_MATERIALS/S4) DEB versions ignoring vs including crowding effect
