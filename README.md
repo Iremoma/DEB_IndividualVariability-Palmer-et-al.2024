@@ -1,10 +1,10 @@
-# DEB_IndividualVariability  Palmer _et-al._ 2024
+# DEB_IndividualVariability Palmer _et-al._ 2024
 
 This repository contains all the code related to the manuscript entitled **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**, by Miquel Palmer, Irene Moro-Martinez, Joaquim Tomas-Ferrer, Amalia Grau, Maria Dolores Lopez-Belluga, Marine Herlin, Orestis Stavrakidis-Zachoua and Andrea Campos-Candela.
 
-The work presented here is a contribution towards gaining greater representation of the between-individual variability in Dynamic Energy Budget (**DEB**) models. [More about DEB theory [here](https://debportal.debtheory.org/docs/)]. We present our analytical strategy based on Bayesian inference and hierarchical models for inferring variability in DEB parameters from data across individuals (also known as between-individual or inter-individual variabilit; **IIV**). The analytical strategy is developed in **STAN**, which is establishing itself as a general-purpose statistical software suitable for the process of fitting complex mechanistic and dynamic models. [More about STAN [here](https://mc-stan.org/)].
+The work presented here is a contribution towards gaining greater representation of the between-individual variability in Dynamic Energy Budget (**DEB**) models. [More about DEB theory [here](https://debportal.debtheory.org/docs/)]. We present our analytical strategy based on Bayesian inference and hierarchical models for inferring variability in DEB parameters from data across individuals (also known as between-individual variability). The analytical strategy is developed in **STAN**, which is establishing itself as a general-purpose statistical software suitable for the process of fitting complex mechanistic and dynamic models. [More about STAN [here](https://mc-stan.org/)].
 
-This repository is licensed under a xxxxx. 
+This repository is licensed under a [MIT License Copyright (c) 2024 Miquel Palmer (et.al. 2024)](../LICENSE). 
 
 # Requirements
 Install: 
