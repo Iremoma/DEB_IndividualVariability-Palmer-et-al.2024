@@ -6,11 +6,11 @@ The codes included in this part of the repository refer to each of the sections 
 
 ## Contents
 ### [S1](../3_SUPPLEMENTARY_MATERIALS/S1) Fitting observed temperature to a sinusoidal function of time
-### [S2](3_SUPPLEMENTARY_MATERIALS/S2) Comparing DEB model predictions when using observed daily data vs sinusoidal function
-### [S3](3_SUPPLEMENTARY_MATERIALS/S3) Fitting observed biomass to a polynomial function of time
-### [S4](3_SUPPLEMENTARY_MATERIALS/S4) DEB versions ignoring vs including crowding effect
-### [S5](3_SUPPLEMENTARY_MATERIALS/S5) DEB versions ignoring vs including reproduction dynamics
-### [S6](3_SUPPLEMENTARY_MATERIALS/S6) Estimating the shape coefficient
-### [S8](3_SUPPLEMENTARY_MATERIALS/S8) Number of parameters to be estimated
-### [S10](3_SUPPLEMENTARY_MATERIALS/S10) Quality control of the results 
+### [S2](../3_SUPPLEMENTARY_MATERIALS/S2) Comparing DEB model predictions when using observed daily data vs sinusoidal function
+### [S3](../3_SUPPLEMENTARY_MATERIALS/S3) Fitting observed biomass to a polynomial function of time
+### [S4](../3_SUPPLEMENTARY_MATERIALS/S4) DEB versions ignoring vs including crowding effect
+### [S5](../3_SUPPLEMENTARY_MATERIALS/S5) DEB versions ignoring vs including reproduction dynamics
+### [S6](../3_SUPPLEMENTARY_MATERIALS/S6) Estimating the shape coefficient
+### [S8](../3_SUPPLEMENTARY_MATERIALS/S8) Number of parameters to be estimated
+### [S10](../3_SUPPLEMENTARY_MATERIALS/S10) Quality control of the results 
 
