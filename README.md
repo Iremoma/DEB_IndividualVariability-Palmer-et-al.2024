@@ -1,6 +1,6 @@
 # DEB_IndividualVariability Palmer _et-al._ 2024
 
-This repository contains all the code related to the manuscript entitled **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**, by Miquel Palmer, Irene Moro-Martinez, Joaquim Tomas-Ferrer, Amalia Grau, Maria Dolores Lopez-Belluga, Marine Herlin, Orestis Stavrakidis-Zachoua and Andrea Campos-Candela.
+This repository contains all the code related to our work entitled **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**, by Miquel Palmer, Irene Moro-Martinez, Joaquim Tomas-Ferrer, Amalia Grau, Maria Dolores Lopez-Belluga, Marine Herlin, Orestis Stavrakidis-Zachoua and Andrea Campos-Candela.
 
 The work presented here is a contribution towards gaining greater representation of the between-individual variability in Dynamic Energy Budget (**DEB**) models. [More about DEB theory [here](https://debportal.debtheory.org/docs/)]. We present our analytical strategy based on Bayesian inference and hierarchical models for inferring variability in DEB parameters from data across individuals (also known as between-individual variability). The analytical strategy is developed in **STAN**, which is establishing itself as a general-purpose statistical software suitable for the process of fitting complex mechanistic and dynamic models. [More about STAN [here](https://mc-stan.org/)].
 
@@ -32,6 +32,5 @@ The codes of the supplementary materials of article Palmer _et al._ 2024 show a 
 If you use this code, please consider citing our work:
 
 Palmer, M.; Moro-Martinez, I.; Tomas-Ferrer, J.; Grau,A.; Lopez-Belluga, M.D.; Herlin, M.; Stavrakidis-Zachoua, O. and Campos-Candela, A. (2024) Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications. _Submitted in a journal and awaiting for evaluation and review from the journal_.
-
 
 Any questions: palmer@imedea.uib-csic.es
