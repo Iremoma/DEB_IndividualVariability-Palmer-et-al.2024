@@ -1,4 +1,4 @@
-# DEB_IndividualVariability Palmer _et-al._ 2024
+# DEB_IndividualVariability Palmer _et al._ 2024
 
 This repository contains all the code related to our work entitled **Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications**, by Miquel Palmer, Irene Moro-Martinez, Joaquim Tomas-Ferrer, Amalia Grau, Maria Dolores Lopez-Belluga, Marine Herlin, Orestis Stavrakidis-Zachoua and Andrea Campos-Candela.
 
