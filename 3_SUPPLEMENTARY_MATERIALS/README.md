@@ -15,4 +15,4 @@ For some sections of the supplementary materials, additional files are necessary
 ### [S6](../3_SUPPLEMENTARY_MATERIALS/S6) Estimating the shape coefficient
 ### [S8](../3_SUPPLEMENTARY_MATERIALS/S8) Number of parameters to be estimated
 ### [S10](../3_SUPPLEMENTARY_MATERIALS/S10) Quality control of the results 
-
+### [S14](../3_SUPPLEMENTARY_MATERIALS/S14) Different Strategies for Running Bayesian Analysis: non-parallelized version.
