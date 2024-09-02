@@ -49,7 +49,7 @@ data = data.frame(t = t, W = W)
 
 A= ggplot(data, aes(x = biomass / 1000 / 20, y = W)) +
   geom_line(color = "#333399", size = 1) +
-  labs(x = bquote("Biomass (Kg? "*m^-3*")"), y = "Correction factor") +
+  labs(x = bquote("Biomass (Kg "*m^-3*")"), y = "Correction factor") +
   theme(
     axis.title.x=element_text(size=10),
     axis.title.y=element_text(size=10),
@@ -181,15 +181,14 @@ p=p + theme(legend.position = c(0.9, 0.15))
 p=p + theme(legend.title = element_blank())
 p
 
-
-for (i in 1:(n + 1)) {
-  p = p + geom_line(
-    data = data.frame(Age = rep(temp2[i], 2), WetWeight = temp3[c(1, 3), i]),
-    aes(x = Age, y = WetWeight), color = "darkgrey"
-  )
-}
-
-p
+# CI for observed data
+# for (i in 1:(n + 1)) {
+#   p = p + geom_line(
+#     data = data.frame(Age = rep(temp2[i], 2), WetWeight = temp3[c(1, 3), i]),
+#     aes(x = Age, y = WetWeight), color = "darkgrey"
+#   )
+# }
+# p
 
 #Saving: 
 
@@ -205,14 +204,14 @@ p
 # measurement devices (see main text). 
 #-----------
 
-z=2
+z=1 # (including initial sampling #0)
 
 # Length with crowding:
 
 data_with_crowding = data.frame(
-  SamplingEvent = factor(rep(1:10, each = nrow(residuals))),
+  SamplingEvent = factor(rep(0:10, each = nrow(residuals))),
   Length = c(residuals[, 1, z:11]),
-  length_method = factor(rep(1 + length_method, each = nrow(residuals))),
+  length_method = factor(rep(1 + c(1,length_method), each = nrow(residuals))),
   Crowding = "With Crowding"
 )
 colors = c("#9999FF", "#333399")
@@ -234,9 +233,9 @@ lengthwc=ggplot(data_with_crowding, aes(x = SamplingEvent, y = Length, fill = le
 # Length with no crowding:
 
 data_with_no_crowding = data.frame(
-  SamplingEvent = factor(rep(1:10, each = nrow(residuals_no))),
+  SamplingEvent = factor(rep(0:10, each = nrow(residuals_no))),
   Length = c(residuals_no[, 1, z:11]),
-  length_method = factor(rep(1 + length_method, each = nrow(residuals))),
+  length_method = factor(rep(1 + c(1,length_method), each = nrow(residuals))),
   Crowding = "Without Crowding")
 
 colors = c("#9999FF", "#333399")
@@ -258,7 +257,7 @@ lengthno=ggplot(data_with_no_crowding, aes(x = SamplingEvent, y = Length, fill =
 # Weight with crowding:
 
 data_with_crowding = data.frame(
-  SamplingEvent = factor(rep(1:10, each = nrow(residuals))),
+  SamplingEvent = factor(rep(0:10, each = nrow(residuals))),
   Weight = c(residuals[, 2, z:11]),
   Crowding = "With Crowding")
 
@@ -279,7 +278,7 @@ weightwc=ggplot(data_with_crowding, aes(x = SamplingEvent, y = Weight)) +
 # Weight with no crowding:
 
 data_with_no_crowding = data.frame(
-  SamplingEvent = factor(rep(1:10, each = nrow(residuals_no))),
+  SamplingEvent = factor(rep(0:10, each = nrow(residuals_no))),
   Weight = c(residuals_no[, 2, z:11]),
   Crowding = "With Crowding")
 
