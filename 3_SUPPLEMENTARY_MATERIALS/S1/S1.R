@@ -22,16 +22,11 @@ library(cowplot)
 library(bayesplot)
 library(posterior)
 
-# Daily data: Temperature and other environmental variables
-
-daily = read.csv("daily data.csv",dec=",")
-daily$fecha=as.Date(as.character(daily$fecha),"%d/%m/%Y")
-
-data.sin=list(pi=pi)
-temp=which(is.na(daily$temperatura))
-data.sin$time=as.numeric(daily$fecha[-temp]-as.Date("2017-01-01"))
-data.sin$temperature=daily$temperatura[-temp]
-data.sin$n=length(data.sin$time)
+load("Temperature.RData")
+# data.sin$time # days from 2017-01-01
+# data.sin$temperature # daily temperature (Celsius degrees)
+# data.sin$n # number of obervations
+# data.sin$pi # pi
 
 #-----       
 # 2: STAN model
@@ -171,8 +166,10 @@ predicted_data = data.frame(
 
 # Producing Figure S1
 
+data.sin$fecha=data.sin$time+as.Date("2017-01-01")
+data.sin=data.frame(data.sin)
 ggplot() +
-  geom_line(data = daily, aes(x = fecha, y = temperatura), color = "darkgrey") +
+  geom_line(data = data.sin, aes(x = fecha, y = temperature), color = "darkgrey") +
   geom_line(data = predicted_data, aes(x = fecha, y = Temperature), color = "#333399", size =1 ) +
   labs(x = "Date", y = "Temperature (Celsius degrees)") +
   theme(
