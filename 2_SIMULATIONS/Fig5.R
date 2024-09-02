@@ -40,7 +40,7 @@ pAm.hat = data.frame(as_draws_df(fit$draws("pAm")))[,1:N]
 data.fpAm = data.frame(
   True = sim.par[,1],
   Estimated = apply(pAm.hat, 2, median),
-  Lower = apply(pAm.hat, 2, quantile, 0.225),
+  Lower = apply(pAm.hat, 2, quantile, 0.025),
   Upper = apply(pAm.hat, 2, quantile, 0.975)
 )
 
@@ -63,14 +63,14 @@ fpAm=ggplot(data.fpAm, aes(x = True, y = Estimated)) +
   )
 
 
-# Nedeed data from out_sim.RDS to create the graphic v:
+# Needed data from out_sim.RDS to create the graphic v:
 
 v.hat = data.frame(as_draws_df(fit$draws("v")))[,1:N]
 
 data.v = data.frame(
   True = sim.par[,2],
   Estimated = apply(v.hat, 2, median),
-  Lower = apply(v.hat, 2, quantile, 0.225),
+  Lower = apply(v.hat, 2, quantile, 0.025),
   Upper = apply(v.hat, 2, quantile, 0.975)
 )
 

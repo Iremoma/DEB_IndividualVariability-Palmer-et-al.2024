@@ -73,7 +73,7 @@ sd.length=0.2
 #sd.weight=median(data.frame(as_draws_df(fit$draws("sd_weight")))[,1])
 sd.weight=10
 
-# Observations: (3D array) obs[repeted measures,fish,[length,weight]]
+# Observations: (3D array) obs[repeated measures,fish,[length,weight]]
 
 true.sim = array(NA,dim=c(N.sim,2,n))
 obs.sim = array(NA,dim=c(N.sim,2,n))
@@ -554,10 +554,10 @@ fit = mod$sample(
 # 7: Saving output
 #-----
 fit$save_object(file = "out_sim.RDS")
-# sink(file = "out_sim_dignosi.txt")
-# fit$cmdstan_diagnose()
-# sink()
-# file.rename("DEB.stan","out_sim_model.R")
+sink(file = "out_sim_dignosi.txt")
+fit$cmdstan_diagnose()
+sink()
+file.rename("DEB.stan","out_sim_model.R")
 
 
 
