@@ -158,7 +158,7 @@ lines(density_post$x,density_post$y,col="red")
 
 #7: v_mu
 
-temp=rcauchy(iter,prior_v[1],prior_v[2])
+temp=rnorm(iter,prior_v[1],prior_v[2])
 temp=temp[which(temp>0)]
 density_prior=density(temp)
 temp=data.frame(as_draws_df(fit$draws("v_mu")))[,1]
@@ -171,7 +171,7 @@ lines(density_post$x,density_post$y,col="red")
 
 #8: v_sd
 
-temp=rcauchy(iter,prior_v_sd[1],prior_v_sd[2])
+temp=rnorm(iter,prior_v_sd[1],prior_v_sd[2])
 temp=temp[which(temp>0)]
 density_prior=density(temp)
 temp=data.frame(as_draws_df(fit$draws("v_sd")))[,1]
@@ -198,7 +198,7 @@ temp=data.frame(as_draws_df(fit$draws("sd_length")))[,2]
 density_post=density(temp)
 lines(density_post$x,density_post$y,col="red")
 
-#10: v_sd
+#10: sd_weight
 
 temp=rcauchy(iter,prior_sd_weight[1],prior_sd_weight[2])
 temp=temp[which(temp>0)]
