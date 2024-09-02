@@ -31,6 +31,6 @@ The codes of the supplementary materials of article Palmer _et al._ 2024 show a 
 # Citation
 If you use this code, please consider citing our work:
 
-Palmer, M.; Moro-Martinez, I.; Tomas-Ferrer, J.; Grau,A.; Lopez-Belluga, M.D.; Herlin, M.; Stavrakidis-Zachoua, O. and Campos-Candela, A. (2024) Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications. _Submitted in a journal and awaiting for evaluation and review from the journal_.
+Palmer, M.; Moro-Martinez, I.; Tomas-Ferrer, J.; Grau,A.; Lopez-Belluga, M.D.; Herlin, M.; Stavrakidis-Zachoua, O. and Campos-Candela, A. (2024) Assessing between-individual variability in bioenergetics modelling: opportunities, challenges, and potential applications. _Accepted in Ecological Modelling. Pending publication_.
 
 Any questions: palmer@imedea.uib-csic.es
