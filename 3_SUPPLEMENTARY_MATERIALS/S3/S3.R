@@ -14,27 +14,17 @@
 # 1: Loading libraries and data
 #-----
 remove(list=ls())
-load("biomass.Rdata")
 library(gridExtra)
 library(ggplot2)
 library(cowplot)
 library(MASS)
 
-age.list=sort(unique(data.jags$age))
+remove(list=ls())
+load("biomass.Rdata")
+# age: fish age (days) at each sampling event
+# biomass: fish biomass (kg) at each sampling event
 
-Nmax=max(table(data.jags$age))
-n=length(age.list)
-
-biomass=rep(NA,n)
-for (i in 1:n){
-  temp=which(data.jags$age==age.list[i])
-  biomass[i]=mean(data.jags$weigth[temp],na.rm = T)*Nmax
-}
-
-age=age.list*365
-
-
-# Selecting the optimal degree:
+# Selecting the optimal degree for a polynomial fit:
 
 fit_1 = lm(biomass ~ age)
 fit_2 = lm(biomass~poly(age,2))
