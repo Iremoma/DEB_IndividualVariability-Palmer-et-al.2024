@@ -53,15 +53,18 @@ res=data.frame(res)
 #----
 # 3: Solving using daily temperature
 #----
-
-daily = read.csv("daily data.csv",dec=",")
-daily$fecha=as.Date(as.character(daily$fecha),"%d/%m/%Y")
-times.forcing=as.numeric(daily$fecha-daily$fecha[1])
-forcing.var = approxfun(times.forcing, daily$temperatura, rule = 2)
+load("Temperature.RData")
+# data.sin$time # days from 2017-01-01
+# data.sin$temperature # daily temperature (Celsius degrees)
+# data.sin$n # number of obervations
+# data.sin$pi # pi
+times.forcing=data.sin$time-data.sin$time[1]
+forcing.var = approxfun(times.forcing, data.sin$temperature, rule = 2)
 parms_daily=parms2
 parms_daily$forcing.var=forcing.var
 
-source("DEB_daily.R")  
+source("DEB_daily.R")
+# This is the same DEB version as above but it uses observed daily temperature as input
 res2 = ode(y=state,
            times=times,
            func=DEBmodel,
@@ -97,8 +100,10 @@ df_res2 = data.frame(
 df = rbind(df_res, df_res2)
 
 # Producing Figure S2:
+data.sin$fecha=data.sin$time+as.Date("2017-01-01")
+data.sin=data.frame(data.sin)
 
-sf=ggplot(daily, aes(x = fecha, y = temperatura)) +
+sf=ggplot(data.sin, aes(x = fecha, y = temperature)) +
   geom_point(shape = 19, size = 1,color="#333399") +
   geom_line(aes(group = 1), color = "darkgrey") +
   labs(x = "Date", y = "Temperature (Celsius degrees)") +
