@@ -144,11 +144,11 @@ functions {
       real biomass;      // Biomass; f(t)
       real W;            // Biomass correction [0,1]
       
-      // temperature correction
+      // temperature correction (Supplementary materials 1 and 2)
       Temp = Kelvin + Temp_mean + Temp_amp*sin(pi2f*(t + birth_correction) + Temp_phi);
       cT = exp(TA/T1 - TA/Temp);
       
-      // crowding (W) [0,1]
+      // crowding (W) [0,1] (Supplementary materials 3)
       biomass = 3.173425e+03-3.720773e+02*t+2.362952e+00*t^2-1.431395e-03*t^3;
       // biomass f(t) (parameters estimated from the actual biomass data) 
       // W0 is the actual biomass at t0
@@ -407,8 +407,8 @@ prior_V0_mu=c(30,100)# normal
 prior_V0_sd=c(10,100)# normal
 prior_pAm = c(parms$pAm_after , parms$pAm_after) # normal
 prior_pAm_sd = c(50,100) # cauchy
-prior_v = c(0, 2) # cauchy
-prior_v_sd = c(0, 1) # cauchy
+prior_v = c(0, 2) # normal
+prior_v_sd = c(0, 1) # normal
 prior_sd_length=c(0,10) # cauchy
 prior_sd_weight=c(0,100) # cauchy
 
@@ -463,7 +463,7 @@ fit = mod$sample(
     p_M = parms$p_M,
     
     # DEB secondary parameters
-    del_M = 0.2805034,   #Supplementary materials 6
+    del_M = 0.2805034,   # Supplementary materials 6
     w_E = parms$w_E,        
     mu_E = parms$mu_E,
     d_V = parms$d_V,
@@ -479,7 +479,7 @@ fit = mod$sample(
     birth_correction = birth_correction,
     
     # Crowding (Supplementary materials 4)
-    W0=27652.82, # Biomass at t0 (gr) 
+    W0 = 27652.82, # Biomass at t0 (gr) 
     
     # Priors
     prior_E0_mu=prior_E0_mu,
@@ -509,8 +509,8 @@ fit = mod$sample(
 # 6: Saving
 #-----
 fit$save_object(file = "out.RDS")
-#sink(file = "out_dignosi.txt")
-#fit$cmdstan_diagnose()
-#sink()
-#file.rename("DEB.stan","out_model.R")
+sink(file = "out_dignosi.txt")
+fit$cmdstan_diagnose()
+sink()
+file.rename("DEB.stan","out_model.R")
 
