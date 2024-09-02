@@ -30,24 +30,24 @@ draws=fit$draws(format="matrix")
 #-----
 
 parms2 = parms 
-parms2$Hp = 145400 # add-my-pet
+parms2$Hp = 145400 # add-my-pet (value for initializing optimization)
 parms2$birth_correction = birth_correction 
-parms2$pAm = median(data.frame(as_draws_df(fit$draws("pAm_mu")))[,1])
-parms2$v = median(data.frame(as_draws_df(fit$draws("v_mu")))[,1])
+parms2$pAm = median(data.frame(as_draws_df(fit$draws("pAm_mu")))[,1]) # estimated from data
+parms2$v = median(data.frame(as_draws_df(fit$draws("v_mu")))[,1]) # estimated from data
 parms2$del_M = 0.2805034 # supp mat 6
 parms2$W0 = 27652.82 # supp mat 3
-parms2$W1 = median(data.frame(as_draws_df(fit$draws("W1")))[,1])
-state = NULL
-state["E"] = median(data.frame(as_draws_df(fit$draws("E0_mu")))[,1])
-state["V"] = median(data.frame(as_draws_df(fit$draws("V0_mu")))[,1])
-state["H"] = 18137.6         
-state["R"] = 1e-30           
+parms2$W1 = median(data.frame(as_draws_df(fit$draws("W1")))[,1]) # estimated from data
+state = NULL # state variables at t0
+state["E"] = median(data.frame(as_draws_df(fit$draws("E0_mu")))[,1]) # estimated from data
+state["V"] = median(data.frame(as_draws_df(fit$draws("V0_mu")))[,1]) # estimated from data
+state["H"] = 18137.6 # arbitrary value for initializing optimization    
+state["R"] = 1e-30   # zero         
 
 #-----
 # 3: Preliminary solving DEB with the model in the main text
 #-----
 
-source("DEB_spawning0.R")  # without spawning dynamics
+source("DEB_spawning0.R")  # DEB version without spawning dynamics
 times=seq(t0,max(age),1)
 res = ode(y=state,
           times=times,
@@ -57,11 +57,11 @@ res = ode(y=state,
 res=data.frame(res)
 
 #-----
-# 4: Estimating H0 and Hp for getting puberty at age_p
+# 4: Estimating H0 and Hp for reaching puberty at age_p
 #-----
 
 times=seq(t0,max(age),.1)
-parms2$age_p = 300
+parms2$age_p = 300 # age at puberty (<365 from observations; we assumed parms2$age_p = 300 days)
 foo=function(x){
   state["H"]=x[1]
   parms2$Hp=x[2]
@@ -71,12 +71,17 @@ foo=function(x){
             parms=parms2,
             method="ode45")
   res=data.frame(res)
-  temp=res$time[which(res$H>=parms2$Hp)][1]
-  (temp-parms2$age_p)^2
+  temp=res$time[which(res$H>=parms2$Hp)][1] # age at puberty `
+  (temp-parms2$age_p)^2 # quantity to be minimized
 }
-
 opt=optim(c(10000,50000),foo)
-
+# Maturity at t0 (H0): 27382 j
+# Maturity at puberty (Hp): 35889 j
+opt$par[1]=27382.78
+opt$par[2]=35889.07
+#-----
+# 5: DEB predictions without spawning dynamics 
+#-----
 state["H"]=opt$par[1]
 parms2$Hp=opt$par[2]
 times=seq(t0,max(age),1)
@@ -87,23 +92,23 @@ res = ode(y=state,
           method="ode45")
 
 res=data.frame(res)
-res$time[which(res$H>=parms2$Hp)][1]
-res.no_spawning=res
+res$time[which(res$H>=parms2$Hp)][1] # cheking optimizer
+res.no_spawning=res # DEB predictions without spawning dynamics 
 
 #-----
-# 5: Estimating max spawn fraction for getting gonad weight = 1% of total wet weight
+# 6: Estimating max spawn fraction for getting gonad weight = 1% of total wet weight
 #-----
 
-temp=seq(t0,age[n],1)
-t2=temp-(floor(temp/365.0)*365.0)
-max.spawn=1
-spawn=max.spawn*(exp(-(t2-330.0)^2.0/(2.0*30.0^2)) + exp(-(t2+365.0-330.0)^2/(2.0*30.0^2.0)))
+# How the spawn fraction is calculated:
+# spawn=max.spawn*(exp(-(time-peak.spawn)^2.0/(2.0*spread.spawn^2)) + exp(-(time+365.0-peak.spawn)^2/(2.0*spread.spawn^2.0)))
+# max.spawn is an arbitrary value for initializing optimization
+# The spawning peak (peak.spawn = 330 days) and the spawning spread (spread.spawn = 30 days)
+#  were approximated from observations
 
-
-source("DEB_spawning1.R")  
+source("DEB_spawning1.R") # DEB version with spawning dynamics   
 parms3=parms2
-parms3$max.spawn=0.5
-parms3$peak.spawn=330
+parms3$max.spawn=0.5 # arbitrary value for initializing optimization
+parms3$peak.spawn=330 
 parms3$spread.spawn=30
 times=seq(t0,age[n],1)
 res = ode(y=state,
@@ -111,12 +116,9 @@ res = ode(y=state,
           func=DEBmodel,
           parms=parms3,
           method="ode45")
-
 res=data.frame(res)
 
-
 times=seq(t0,max(age),1)
-
 foo=function(x){
   parms3$max.spawn=x[1]
   parms3$peak.spawn=x[2]
@@ -130,15 +132,17 @@ foo=function(x){
   res=data.frame(res)
   temp=100*res$gonad_weight[length(times)] /
     res$wet_weight[length(times)] 
-  (temp-1.0)^2 
+  (temp-1.0)^2 # quantity to be minimized (1% is the gonad weight estimated from observations)
 }
-
-
+# optimization 
 opt=nmkb(p=c(0.5,330,30), f=foo, lower=c(0,200,20), upper=c(1,365,50)) 
-
-# estimated peak date
+# max.spawn: 0.03
+opt$par[1]=0.03034681
+# peak.spawn: 338 days (which, after adding birth.correction, corresponds to Dec 25th)
+opt$par[2]=338.17816951
 as.Date("2000-01-01")+opt$par[2]+birth_correction
-
+# spread.spawn: 36.6 days
+opt$par[3]=36.55759845
 # estimated parameters for the spawning dynamics
 parms3$max.spawn=opt$par[1]
 parms3$peak.spawn=opt$par[2]
@@ -155,8 +159,8 @@ res=data.frame(res)
 # checking optimization success
 100*res$gonad_weight[length(times)] / 
   res$wet_weight[length(times)]
-
-res.spawning=res
+# [1] 1.000267 (target is 1.0%)
+res.spawning=res # DEB predictions with spawning dynamics 
 
 # maximum deference in wet weight 
 max(res.spawning$wet_weight-res.no_spawning$wet_weight)
